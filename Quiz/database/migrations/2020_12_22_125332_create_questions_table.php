@@ -15,6 +15,13 @@ class CreateQuestionsTable extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
+            $table->string('question');
+            $table->integer('question_weight');
+            $table->boolean('is_answered');
+
+            $table->foreignId('caregory_id');
+            $table->foreign('caregory_id')->references('id')->on('categories');
+
             $table->timestamps();
         });
     }

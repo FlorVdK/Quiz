@@ -14,7 +14,8 @@ class QuizController extends Controller
      */
     public function index()
     {
-        //
+        $quiz = 'test';
+        return view('quiz.index', ['quiz' => $quiz]);
     }
 
     /**
