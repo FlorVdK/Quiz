@@ -14,7 +14,7 @@ class QuizController extends Controller
      */
     public function index()
     {
-        $quiz = 'test';
+        $quiz = Quiz::find(1);
         return view('quiz.index', ['quiz' => $quiz]);
     }
 

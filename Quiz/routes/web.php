@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/quiz',[QuizController::class, 'index']);
+Route::get('/quiz',[QuizController::class, 'index'])->name('quiz');
+Route::get('/question/{id}',[QuestionController::class, 'index'])->name('question');
+Route::get('/question/{id}/answers',[AnswerController::class, 'index'])->name('answers');
